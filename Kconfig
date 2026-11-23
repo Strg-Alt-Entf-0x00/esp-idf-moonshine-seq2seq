@@ -1,0 +1,47 @@
+menu "Moonshine ASR Configuration"
+
+    config MOONSHINE_ENABLE_AUDIO_UTILS
+        bool "Enable audio preprocessing utilities"
+        default y
+        help
+            Enable built-in audio preprocessing utilities (resampling, format conversion, etc.)
+            
+            These utilities provide convenient functions to convert audio from various formats
+            (different sample rates, bit depths, channel counts) to the 16kHz mono int16 format
+            required by Moonshine.
+            
+            If disabled, applications must provide audio in the correct format themselves.
+            This can reduce binary size if you have your own audio pipeline.
+
+    config MOONSHINE_MAX_VOCAB_SIZE
+        int "Maximum vocabulary size"
+        default 32768
+        range 1000 65536
+        help
+            Maximum vocabulary size supported by the tokenizer.
+            Reduce to save memory if using smaller models.
+
+    config MOONSHINE_MAX_HIDDEN_SIZE
+        int "Maximum hidden dimension size"
+        default 512
+        range 128 2048
+        help
+            Maximum hidden dimension size for model architecture.
+            Must be >= the actual model's hidden size.
+
+    config MOONSHINE_MAX_LAYERS
+        int "Maximum number of layers"
+        default 12
+        range 1 24
+        help
+            Maximum number of encoder/decoder layers.
+            Must be >= the actual model's layer count.
+
+    config MOONSHINE_ENABLE_DEBUG_LOGGING
+        bool "Enable detailed debug logging"
+        default n
+        help
+            Enable verbose logging for debugging model loading and inference.
+            Warning: This can generate a lot of output and slow down performance.
+
+endmenu

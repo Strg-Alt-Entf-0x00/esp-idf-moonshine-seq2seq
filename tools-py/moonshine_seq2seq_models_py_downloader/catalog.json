@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "project_id": "moonshine-seq2seq",
+  "artifacts": [
+    {
+      "id": "moonshine-tiny-en",
+      "destination": "moonshine-seq2seq-py-tiny-en",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["en"],
+        "license": "mit",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny",
+        "revision": "390624ed33d594443aa4aa221f5b9f283b545b5a",
+        "files": [
+          {"id": "tiny-en-config", "default": true, "path": "config.json"},
+          {"id": "tiny-en-generation-config", "default": true, "path": "generation_config.json"},
+          {"id": "tiny-en-weights", "default": true, "path": "model.safetensors"},
+          {"id": "tiny-en-preprocessor", "default": true, "path": "preprocessor_config.json"},
+          {"id": "tiny-en-tokenizer", "default": true, "path": "tokenizer.json"},
+          {"id": "tiny-en-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-base-en",
+      "destination": "moonshine-seq2seq-py-base-en",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["en"],
+        "license": "mit",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-base"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-base",
+        "revision": "7a73d8d55ac0ba2ef3ae761593f6784b51f96dcf",
+        "files": [
+          {"id": "base-en-config", "default": false, "path": "config.json"},
+          {"id": "base-en-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "base-en-weights", "default": false, "path": "model.safetensors"},
+          {"id": "base-en-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "base-en-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "base-en-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-de",
+      "destination": "moonshine-seq2seq-py-tiny-de",
+      "metadata": {
+        "publisher_type": "community",
+        "publisher": "dattazigzag",
+        "language": ["de"],
+        "license": "mit",
+        "base_model": "moonshine-ai/moonshine-tiny",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "reported_metrics": "WER 36.7 on MLS German test; unverified by Hugging Face",
+        "model_card": "https://huggingface.co/dattazigzag/moonshine-tiny-de"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "dattazigzag/moonshine-tiny-de",
+        "revision": "669f0bf9df40d625c5cbe2a205f8369f835f29c0",
+        "files": [
+          {"id": "tiny-de-config", "default": true, "path": "config.json"},
+          {"id": "tiny-de-generation-config", "default": true, "path": "generation_config.json"},
+          {"id": "tiny-de-weights", "default": true, "path": "model.safetensors"},
+          {"id": "tiny-de-preprocessor", "default": true, "path": "preprocessor_config.json"},
+          {"id": "tiny-de-special-tokens", "default": true, "path": "special_tokens_map.json"},
+          {"id": "tiny-de-tokenizer", "default": true, "path": "tokenizer.json"},
+          {"id": "tiny-de-tokenizer-config", "default": true, "path": "tokenizer_config.json"},
+          {"id": "tiny-de-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-fr",
+      "destination": "moonshine-seq2seq-py-tiny-fr",
+      "metadata": {
+        "publisher_type": "community",
+        "publisher": "Cornebidouil",
+        "language": ["fr"],
+        "license": "mit",
+        "base_model": "moonshine-ai/moonshine-tiny",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/Cornebidouil/moonshine-tiny-fr"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "Cornebidouil/moonshine-tiny-fr",
+        "revision": "cae6a667697c5e3da7a7e8095e2830cc5fb12fe3",
+        "files": [
+          {"id": "tiny-fr-config", "default": false, "path": "config.json"},
+          {"id": "tiny-fr-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-fr-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-fr-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-fr-special-tokens", "default": false, "path": "special_tokens_map.json"},
+          {"id": "tiny-fr-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-fr-tokenizer-config", "default": false, "path": "tokenizer_config.json"},
+          {"id": "tiny-fr-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-ar",
+      "destination": "moonshine-seq2seq-py-tiny-ar",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["ar"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-ar"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-ar",
+        "revision": "99e7fee255a87426af8e434b147707495909fbc3",
+        "files": [
+          {"id": "tiny-ar-config", "default": false, "path": "config.json"},
+          {"id": "tiny-ar-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-ar-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-ar-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-ar-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-ar-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-zh",
+      "destination": "moonshine-seq2seq-py-tiny-zh",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["zh"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-zh"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-zh",
+        "revision": "3306270959bfe7dd4c1c02a7bd6885933e5d1a9d",
+        "files": [
+          {"id": "tiny-zh-config", "default": false, "path": "config.json"},
+          {"id": "tiny-zh-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-zh-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-zh-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-zh-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-zh-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-ja",
+      "destination": "moonshine-seq2seq-py-tiny-ja",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI",
+        "language": ["ja"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-ja"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-ja",
+        "revision": "02ca41b3d9e73db07df9a13f316f2b7497a368e2",
+        "files": [
+          {"id": "tiny-ja-config", "default": false, "path": "config.json"},
+          {"id": "tiny-ja-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-ja-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-ja-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-ja-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-ja-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-ko",
+      "destination": "moonshine-seq2seq-py-tiny-ko",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["ko"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-ko"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-ko",
+        "revision": "80995f09a256c86c52dea435ba787dc6dfc0ee61",
+        "files": [
+          {"id": "tiny-ko-config", "default": false, "path": "config.json"},
+          {"id": "tiny-ko-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-ko-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-ko-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-ko-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-ko-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-uk",
+      "destination": "moonshine-seq2seq-py-tiny-uk",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["uk"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-uk"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-uk",
+        "revision": "8cf70f4183733a18b1c2b04543faedaa7ea62103",
+        "files": [
+          {"id": "tiny-uk-config", "default": false, "path": "config.json"},
+          {"id": "tiny-uk-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-uk-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-uk-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-uk-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-uk-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    },
+    {
+      "id": "moonshine-tiny-vi",
+      "destination": "moonshine-seq2seq-py-tiny-vi",
+      "metadata": {
+        "publisher_type": "official",
+        "publisher": "Moonshine AI / Useful Sensors",
+        "language": ["vi"],
+        "license": "other",
+        "format": "transformers-safetensors",
+        "device_compatibility": "source-checkpoint; project conversion and device validation required",
+        "model_card": "https://huggingface.co/moonshine-ai/moonshine-tiny-vi"
+      },
+      "source": {
+        "provider": "huggingface",
+        "repo_id": "moonshine-ai/moonshine-tiny-vi",
+        "revision": "d4d20dada16b64c94ca9e1c765fc4d3d968d496e",
+        "files": [
+          {"id": "tiny-vi-config", "default": false, "path": "config.json"},
+          {"id": "tiny-vi-generation-config", "default": false, "path": "generation_config.json"},
+          {"id": "tiny-vi-weights", "default": false, "path": "model.safetensors"},
+          {"id": "tiny-vi-preprocessor", "default": false, "path": "preprocessor_config.json"},
+          {"id": "tiny-vi-tokenizer", "default": false, "path": "tokenizer.json"},
+          {"id": "tiny-vi-model-card", "kind": "model_card", "default": false, "path": "README.md"}
+        ]
+      }
+    }
+  ],
+  "converter": null
+}

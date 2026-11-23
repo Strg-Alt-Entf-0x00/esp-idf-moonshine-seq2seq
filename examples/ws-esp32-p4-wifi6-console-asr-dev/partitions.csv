@@ -1,0 +1,24 @@
+# ESP32-P4 ASR Partition Table
+# Flash: 32MB
+# 
+# Name,       Type, SubType,  Offset,   Size,     Flags
+# Bootloader is at 0x0 (not in partition table)
+# Partition table is at 0x8000
+
+# NVS - Non-volatile storage
+nvs,          data, nvs,      0x9000,   24K,
+
+# PHY init data
+phy_init,     data, phy,      0xf000,   4K,
+
+# Factory app partition (main firmware)
+factory,      app,  factory,  0x10000,  3M,
+
+# OTA data partition
+otadata,      data, ota,      0x310000, 8K,
+
+# OTA_0 partition (for OTA updates)
+ota_0,        app,  ota_0,    0x320000, 3M,
+
+# OTA_1 partition (for OTA updates)
+ota_1,        app,  ota_1,    0x620000, 3M,

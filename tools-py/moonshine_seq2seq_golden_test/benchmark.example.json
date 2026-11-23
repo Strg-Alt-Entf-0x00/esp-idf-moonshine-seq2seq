@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "output_root": ".data/golden_test/runs",
+  "run_label": "moonshine-asr-evaluation",
+  "device": "auto",
+  "max_samples_per_dataset": 20,
+  "sample_seed": 20261027,
+  "allow_unverified_references": false,
+  "generation": {
+    "num_beams": 1,
+    "max_new_tokens": 128
+  },
+  "models": [
+    {
+      "id": "tiny-de",
+      "language": "de",
+      "path": "models/py/moonshine-seq2seq-py-tiny-de"
+    },
+    {
+      "id": "tiny-en",
+      "language": "en",
+      "path": "models/py/moonshine-seq2seq-py-tiny-en"
+    },
+    {
+      "id": "base-en",
+      "language": "en",
+      "path": "models/py/moonshine-seq2seq-py-base-en"
+    }
+  ],
+  "datasets": [
+    {
+      "id": "de-test",
+      "language": "de-DE",
+      "manifest": ".data/asr_test/de/manifest.jsonl"
+    },
+    {
+      "id": "en-test",
+      "language": "en-US",
+      "manifest": ".data/asr_test/en/manifest.jsonl"
+    }
+  ]
+}

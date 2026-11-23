@@ -1,0 +1,16 @@
+version: "1.0.0"
+name: "esp-idf-moonshine-seq2seq"
+description: "Native Moonshine Seq2Seq ASR inference component for ESP-IDF"
+url: "https://github.com/Strg-Alt-Entf-0x00/esp-idf-moonshine-seq2seq"
+repository: "https://github.com/Strg-Alt-Entf-0x00/esp-idf-moonshine-seq2seq.git"
+license: "PolyForm-Noncommercial-1.0.0"
+targets:
+  - esp32p4
+
+dependencies:
+  idf:
+    version: ">=6.0.2"
+  esp-idf-model-manager:
+    git: "https://github.com/Strg-Alt-Entf-0x00/esp-idf-model-manager.git"
+  espressif/esp-dsp:
+    version: "^1.8.2"

@@ -1,0 +1,35 @@
+idf_component_register(
+    SRCS
+        "main.cpp"
+        "cmd_asr_cli.cpp"
+        "benchmark_suite.cpp"
+        "wifi_transfer.cpp"
+        "audio_wav.c"
+        "console_cli.c"
+        "debug_log.c"
+        "debug_uart.c"
+        "profiler.c"
+        "audio_pipeline/vad_filter.cpp"
+    INCLUDE_DIRS
+        "."
+        "audio_pipeline"
+    REQUIRES
+        board_audio
+        esp-idf-moonshine-seq2seq
+        esp-idf-model-manager
+        nvs_flash
+        spi_flash
+        esp_hosted
+        esp_wifi_remote
+        esp_wifi
+        esp_netif
+        esp_event
+        esp_http_server
+        fatfs
+        sdmmc
+        esp-idf-pulsevad
+        console
+        driver
+        esp_driver_sdmmc
+        esp_driver_uart
+)

@@ -1,0 +1,54 @@
+menu "ASR microphone input"
+
+choice ASR_MIC_DEFAULT
+    prompt "Default microphone input"
+    default ASR_MIC_DEFAULT_ONBOARD
+    help
+        Select the input used after boot. The source can also be changed from
+        the console while capture is stopped.
+
+    config ASR_MIC_DEFAULT_ONBOARD
+        bool "Onboard analog microphone via ES8311"
+
+    config ASR_MIC_DEFAULT_INMP441
+        bool "External 24-bit I2S microphone"
+endchoice
+
+config ASR_ES8311_MIC_GAIN_DB
+    int "Onboard ES8311 microphone PGA gain (dB)"
+    default 36
+    range 0 42
+    help
+        Supported values are 0, 6, 12, 18, 24, 30, 36, and 42 dB. Start with
+        a moderate value and use the mic level command to check noise and
+        clipping before increasing gain.
+
+config ASR_INMP441_BCLK_GPIO
+    int "External I2S microphone BCLK GPIO"
+    default 20
+    range 0 54
+
+config ASR_INMP441_WS_GPIO
+    int "External I2S microphone WS GPIO"
+    default 21
+    range 0 54
+
+config ASR_INMP441_DIN_GPIO
+    int "External I2S microphone data-in GPIO"
+    default 22
+    range 0 54
+
+choice ASR_INMP441_SLOT
+    prompt "External I2S microphone slot"
+    default ASR_INMP441_SLOT_LEFT
+    help
+        Match this setting to the microphone L/R pin wiring.
+
+    config ASR_INMP441_SLOT_LEFT
+        bool "Left slot (L/R low)"
+
+    config ASR_INMP441_SLOT_RIGHT
+        bool "Right slot (L/R high)"
+endchoice
+
+endmenu
